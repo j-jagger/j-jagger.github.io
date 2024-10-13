@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'applefont';
+    src: url('resources/fonts/sfuidisplay-regular.woff2') format('woff2'),
+         url('resources/fonts/sfuidisplay-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'applefont_black';
+    src: url('resources/fonts/sfuidisplay-black.woff2') format('woff2'),
+         url('resources/fonts/sfuidisplay-black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'applefont_bold';
+    src: url('resources/fonts/sfuidisplay-bold.woff2') format('woff2'),
+         url('resources/fonts/sfuidisplay-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Body styling */
+body {
+    font-family: 'applefont';
+    background-color: #8B0000;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+/* Background styling */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 69, 0, 0.8) 0%, rgba(139, 0, 0, 0.8) 50%, rgba(80, 0, 0, 0.9) 100%);
+    filter: blur(40px);
+    z-index: -2;
+    opacity: 1;
+}
+
+/* Glow effect */
+.glow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 165, 0, 0.4) 0%, rgba(255, 69, 0, 0.1) 50%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: pulse 2s infinite alternate;
+    z-index: -1;
+    opacity: 1;
+}
+
+/* Header styles */
+#fade-header {
+    font-size: 48px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.header {
+    font-family: 'applefont';
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+.header-superheader {
+    font-family: 'applefont';
+    color: #ffffff;
+    font-size: 100px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.header h1 {
+    font-family: 'applefont_black';
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.header h2 {
+    font-family: 'applefont_bold';
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.header h3 {
+    font-family: 'applefont';
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.header p {
+    font-family: 'applefont';
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Container for cards */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+/* Card styles */
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    width: 200px;
+    max-height: 300px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.2, 1.2);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Big card styles */
+.card-big {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    display: flex;
+    padding: 20px;
+    width: 700px;
+    max-height: 300px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+.card-big:hover {
+    transform: scale(1.2, 1.2);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Card image styles */
+.card-image-big {
+    width: 30%;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-right: auto; /* This will push it to the left */
+}
+.card-image {
+    width: 100%;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Card title and description styles */
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.card-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+}
+
+/* Card action styles */
+.card-action {
+    font-size: 14px;
+    color: #FFA500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
