@@ -142,16 +142,19 @@ body {
     backdrop-filter: blur(10px);
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
     padding: 20px;
     width: 700px;
     max-height: 300px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+}
+.card-big p {
     text-align: left;
+    align-self: flex-start;
 }
 .card-big:hover {
-    transform: scale(1.2, 1.2);
     transform: translateY(-5px);
     box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
 }
