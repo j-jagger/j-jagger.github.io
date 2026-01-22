@@ -1,12 +1,2 @@
-# MOVED TO https://jjagger.wsys.day/
-
-
-
-
-
-
-
-
-
-# j-jagger.github.io
-Personal Site
+## This site has been migrated and recreated @
+# https://jjagger.wsys.day
